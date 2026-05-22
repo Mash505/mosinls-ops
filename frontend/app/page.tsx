@@ -9,7 +9,7 @@ export default function CloudShell() {
   ]);
   const [loading, setLoading] = useState(false);
 
-  const handleCommand = async (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleCommand = async (e) => {
     if (e.key === "Enter" && input.trim()) {
       const cmd = input.trim();
       setInput("");
@@ -17,7 +17,6 @@ export default function CloudShell() {
       setLoading(true);
 
       try {
-        // Backend API ko call karna (Abhi localhost par hai, baad mein cloud URL aayega)
         const response = await fetch("http://localhost:8000/execute", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
