@@ -125,7 +125,8 @@ export default function CloudShell() {
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "1px solid #333", paddingBottom: "15px", marginBottom: "20px" }}>
         <div>
           <h1 style={{ color: "white", margin: "0 0 5px 0" }}>MosinLSOps Cloud-Shell</h1>
-          <span style={{ color: "gray", fontSize: "14px" }}>Logged in as: {session.user.email}</span>
+          {/* Yahan par humne optional chaining (?.) laga di hai */}
+          <span style={{ color: "gray", fontSize: "14px" }}>Logged in as: {session?.user?.email}</span>
         </div>
         <button onClick={handleLogout} style={{ backgroundColor: "transparent", color: "#ff3333", border: "1px solid #ff3333", padding: "8px 15px", cursor: "pointer", borderRadius: "5px" }}>
           DISCONNECT
