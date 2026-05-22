@@ -17,7 +17,8 @@ export default function CloudShell() {
       setLoading(true);
 
       try {
-        const response = await fetch("http://localhost:8000/execute", {
+        // Yahan par humne tumhara naya Render URL daal diya hai!
+        const response = await fetch("https://mosinls-ops.onrender.com/execute", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ command: cmd })
@@ -67,7 +68,7 @@ export default function CloudShell() {
             fontFamily: "monospace" 
           }} 
           disabled={loading}
-          placeholder="e.g., Deploy a high-availability Next.js app on AWS..."
+          placeholder="e.g., Write a Dockerfile for a Python app..."
         />
       </div>
     </div>
