@@ -1,0 +1,15 @@
+# Security Secrets (NEVER PUSH TO GITHUB)
+.env
+.env.local
+.secret
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+
+# Mac/Windows System Files
+.DS_Store
+Thumbs.db
